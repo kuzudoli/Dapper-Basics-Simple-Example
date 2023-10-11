@@ -13,20 +13,20 @@ async Task GetList()
         Console.WriteLine(conn.State.ToString());
 
         #region QueryAsync (Select)
-        var model = await conn.QueryAsync<Employee>("SELECT * FROM Employees");
+        var result = await conn.QueryAsync<Employee>("SELECT * FROM Employees");
         #endregion
 
         #region ExecuteAsync (Insert)
         //var hasData = conn.QueryAsync<Employee>("SELECT * FROM Employees WHERE first_name = 'Enes'").Result.Any(x => x.first_name == "Enes");
         //if (!hasData)
         //{
-        //    var result = await conn.ExecuteAsync("INSERT INTO Employees Values(3278,'Enes','Çakır',23,'enesckr@gmail.com','Turkey','28000','Red','01/08/2021','10000')");
+        //    var result = await conn.ExecuteAsync("INSERT INTO Employees Values(1001,'Enes','Çakır',23,'eckr@mail.com','Turkey','34000','Red','01/08/2021','10000')");
         //    var response = await conn.QueryAsync<Employee>("SELECT * FROM Employees WHERE first_name = 'Enes'");
         //}
         #endregion
 
         #region ExecuteAsync (Update)
-        //var result = await conn.ExecuteAsync("UPDATE Employees SET favorite_color = 'Yellow' WHERE employee_id = '3278'");
+        //var result = await conn.ExecuteAsync("UPDATE Employees SET favorite_color = 'Yellow' WHERE employee_id = '1001'");
         //var response = await conn.QueryAsync<Employee>("SELECT * FROM Employees WHERE first_name = 'Enes'");
         #endregion
 
@@ -36,13 +36,14 @@ async Task GetList()
 
         #region QueryAsync (SP-Select)
 
-        #region SQL Komutu: GetYoungEmployeesByFavoriteColor
-        /*CREATE PROCEDURE GetYoungEmployeesByFavoriteColor
-        (@age int, @favColor varchar(50))
-        AS
-        BEGIN
-	        SELECT * FROM Employees WHERE age < @age AND favorite_color = @favColor
-        END*/
+        #region Create SP: GetYoungEmployeesByFavoriteColor
+        //var spResult = await conn.QueryAsync(@"CREATE PROCEDURE GetYoungEmployeesByFavoriteColor 
+        //                                    (@age int, @favColor varchar(50)) 
+        //                                    AS 
+        //                                    BEGIN 
+        //                                        SELECT * FROM Employees WHERE age < @age AND favorite_color = @favColor 
+        //                                    END");
+
         #endregion
 
         //var parameters = new DynamicParameters();
@@ -55,14 +56,14 @@ async Task GetList()
 
         #region ExecuteAsync (SP-Insert)
 
-        #region SQL Komutu: InsertEmployee
-
-        /*CREATE PROCEDURE InsertEmployee
-        (@id int,@name varchar,@lastname varchar, @country varchar, @age int, @favColor varchar)
-        AS
-        BEGIN
-	        INSERT INTO Employees(employee_id, first_name, last_name, country, age, favorite_color) VALUES(@id,@name,@lastname,@country, @age, @favColor);
-        END*/
+        #region Create SP: InsertEmployee
+        //var spResult = await conn.QueryAsync(@"CREATE PROCEDURE InsertEmployee
+        //                                    (@id int,@name varchar,@lastname varchar, @country varchar, @age int, @favColor varchar)
+        //                                    AS
+        //                                    BEGIN
+        //                                        INSERT INTO Employees(employee_id, first_name, last_name, country, age, favorite_color) 
+        //                                        VALUES(@id,@name,@lastname,@country, @age, @favColor);
+        //                                    END");
         #endregion
 
         //var parameters = new DynamicParameters();
