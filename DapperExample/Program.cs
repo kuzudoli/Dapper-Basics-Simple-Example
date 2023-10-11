@@ -7,8 +7,11 @@ await GetList();
 
 async Task GetList()
 {
-    using (IDbConnection conn = new SqlConnection("Data Source=.;Initial Catalog=TestDB;Integrated Security=True;Connect Timeout=30;"))
+    IDbConnection conn = null;
+    using (conn = new SqlConnection("Data Source=.;Initial Catalog=TestDB;Integrated Security=True;Connect Timeout=30;"))
     {
+        Console.WriteLine(conn.State.ToString());
+
         #region QueryAsync (Select)
         var model = await conn.QueryAsync<Employee>("SELECT * FROM Employees");
         #endregion
@@ -30,7 +33,6 @@ async Task GetList()
         #region ExecuteAsync (Delete)
         //var result = await conn.ExecuteAsync("DELETE FROM Employees WHERE age < 19");
         #endregion
-
 
         #region QueryAsync (SP-Select)
 
@@ -76,5 +78,9 @@ async Task GetList()
 
         //Breakpoint variable for debugging the results
         var wait = 1;
+
+        Console.WriteLine(conn.State.ToString());
     }
+
+    Console.WriteLine(conn.State.ToString());
 }
