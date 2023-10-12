@@ -32,6 +32,19 @@ async Task GetList()
         #endregion
 
 
+        #region MultipleMapping (INNER JOIN) (One-To-One)
+        //var sql = @"SELECT e.employee_id, e.first_name, e.last_name, e.email, c.company_id, c.company_name, c.founding_date 
+        //            FROM Employees e
+        //            INNER JOIN Companies c on e.employee_id = c.employee_id ";
+
+        //var result = await conn.QueryAsync<Employee, Company, Employee>(sql, (employee, company) =>
+        //{
+        //    employee.Company = company;
+        //    return employee;
+        //}, splitOn: "company_id");
+        #endregion
+
+
         #region QueryAsync (SP-Select)
 
         #region Create SP: GetYoungEmployeesByFavoriteColor
