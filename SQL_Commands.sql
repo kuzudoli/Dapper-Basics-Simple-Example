@@ -11,6 +11,13 @@ CREATE TABLE TestDB.dbo.Employees (
 	salary real NULL
 );
 
+CREATE TABLE TestDB.dbo.Companies (
+	company_id int NULL,
+	company_name varchar(50) NULL,
+	founding_date varchar(50) NULL,
+	employee_id int NULL
+);
+
 INSERT INTO Employees (employee_id, first_name, last_name, age, email, country, postal_code, favorite_color, hire_date, salary) VALUES(1, 'Sanson', N'Calloway', 38, N'scalloway0@ox.ac.uk', N'China', N'', N'red', N'11/9/2017', 595346.06);
 INSERT INTO Employees (employee_id, first_name, last_name, age, email, country, postal_code, favorite_color, hire_date, salary) VALUES(2, N'Cyril', N'Lipscombe', 81, N'clipscombe1@geocities.jp', N'Brazil', N'12400-000', N'blue', N'4/15/2011', 807632.0);
 INSERT INTO Employees (employee_id, first_name, last_name, age, email, country, postal_code, favorite_color, hire_date, salary) VALUES(3, N'Amity', N'Fredi', 37, N'afredi2@purevolume.com', N'Philippines', N'4803', N'blue', N'12/19/2010', 192574.67);
@@ -211,3 +218,48 @@ INSERT INTO Employees (employee_id, first_name, last_name, age, email, country, 
 INSERT INTO Employees (employee_id, first_name, last_name, age, email, country, postal_code, favorite_color, hire_date, salary) VALUES(199, N'Evey', N'Snoden', 32, N'esnoden5i@histats.com', N'Portugal', N'9700-505', N'green', N'7/22/2020', 50728.03);
 INSERT INTO Employees (employee_id, first_name, last_name, age, email, country, postal_code, favorite_color, hire_date, salary) VALUES(200, N'Collie', N'Arlett', 59, N'carlett5j@soundcloud.com', N'Bulgaria', N'5964', N'blue', N'12/27/2021', 441327.0);
 INSERT INTO Employees (employee_id, first_name, last_name, age, email, country, postal_code, favorite_color, hire_date, salary) VALUES(201, N'Chen', N'Cornborough', 56, N'ccornborough5k@posterous.com', N'Poland', N'66-330', N'blue', N'6/10/2014', 829901.8);
+
+
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(8, N'Vimbo', N'2/9/2023', 148);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(9, N'Eare', N'6/12/2023', 88);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(1, N'Podcat', N'6/19/2023', 101);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(1, N'Tagcat', N'4/21/2023', 180);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(4, N'Browsezoom', N'2/23/2023', 96);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(1, N'Omba', N'1/14/2023', 60);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(9, N'Gabspot', N'5/25/2023', 168);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(6, N'Fadeo', N'8/4/2023', 83);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(6, N'DabZ', N'8/17/2023', 78);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(7, N'Dynabox', N'1/8/2023', 36);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(3, N'Livetube', N'8/26/2023', 92);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(1, N'Realblab', N'5/30/2023', 120);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(8, N'Pixope', N'3/2/2023', 126);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(9, N'Wordtune', N'10/8/2023', 103);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(8, N'Fivebridge', N'1/15/2023', 31);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(2, N'Realbuzz', N'3/29/2023', 130);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(2, N'Katz', N'8/29/2023', 44);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(8, N'Mymm', N'7/7/2023', 17);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(1, N'Divavu', N'2/2/2023', 77);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(10, N'Realpoint', N'5/21/2023', 2);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(8, N'Voomm', N'6/24/2023', 116);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(9, N'Devpulse', N'2/9/2023', 149);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(10, N'Zoozzy', N'5/7/2023', 38);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(7, N'Brainlounge', N'2/10/2023', 24);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(10, N'Linklinks', N'10/14/2022', 67);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(8, N'Youfeed', N'9/25/2023', 25);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(10, N'Riffpedia', N'9/12/2023', 97);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(4, N'Edgetag', N'8/7/2023', 185);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(10, N'Twinder', N'10/22/2022', 146);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(8, N'Lazz', N'2/13/2023', 82);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(7, N'Skinte', N'7/23/2023', 128);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(5, N'Skaboo', N'7/9/2023', 23);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(6, N'Wikizz', N'8/3/2023', 98);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(7, N'Trudoo', N'10/27/2022', 184);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(3, N'Tagtune', N'9/3/2023', 198);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(3, N'Skalith', N'6/10/2023', 100);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(5, N'Twitterbeat', N'2/22/2023', 86);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(4, N'Meevee', N'12/20/2022', 183);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(5, N'Linkbridge', N'2/21/2023', 46);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(4, N'Thoughtstorm', N'5/29/2023', 157);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(8, N'Zoonder', N'8/7/2023', 57);
+INSERT INTO Companies (company_id, company_name, founding_date, employee_id) VALUES(9, N'Dynazzy', N'12/9/2022', 124);
+
